@@ -6,17 +6,21 @@ Query Optimizer
 ### Rewrite the query into an optimal format.
 ### Give the query tree in graphic form.
  
-For example, the user may give a query as
+### For example, the user may give a query as
+'''
 SELECT EMPLOYEE.EMPNO, POSITION
 FROM EMPLOYEE  E,  JOBHISTORY  J
 WHERE E. EMPNO = J. EMPNO
 AND STARTDATE <= ENDDATE
 AND SALARY <= 3000;
+'''
  
-Here, the unlined part is unnecessary and can be optimized. Therefore, your system should automatically rewrite the query into
+### Here, the unlined part is unnecessary and can be optimized. Therefore, your system should automatically rewrite the query into:
+'''
 SELECT EMPLOYEE.EMPNO, POSITION
 FROM EMPLOYEE  E,  JOBHISTORY  J
 WHERE E. EMPNO = J. EMPNO
 AND SALARY <= 3000;
+'''
  
 And give the optimal query tree of this query using the knowledge learned from class.
